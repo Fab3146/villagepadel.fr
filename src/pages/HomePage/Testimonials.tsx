@@ -4,7 +4,7 @@ import { Star } from 'lucide-react';
 const testimonials = [
   {
     name: "Clement P.",
-    role: "Présidente de club de Grisolles ",
+    role: "Président du club de Grisolles ",
     image: "https://res.cloudinary.com/damfvriyn/image/upload/v1736192485/pexels-newman-photographs-234743505-30071289_qbxjui.jpg",
     text: "Une solution clé en main qui nous a permis de développer le padel sans investissement initial."
   },
