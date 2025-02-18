@@ -1,49 +1,28 @@
 import React from 'react';
-import { MapPin, Users, Smartphone, Award } from 'lucide-react';
 
-const Features = () => {
-  const features = [
-    {
-      icon: <MapPin className="h-8 w-8 text-brand-orange" />,
-      title: "Localisation parfaite",
-      description: "Situé au cœur de Grisolles, facile d'accès pour tous les 'villageois'"
-    },
-    {
-      icon: <Users className="h-8 w-8 text-brand-orange" />,
-      title: "Ambiance conviviale",
-      description: "Rencontrez d'autres passionnés de padel dans un cadre chaleureux"
-    },
-    {
-      icon: <Smartphone className="h-8 w-8 text-brand-orange" />,
-      title: "Réservation simplifiée",
-      description: "Téléchargez l'application Village Padel pour réserver en quelques clics"
-    },
-    {
-      icon: <Award className="h-8 w-8 text-brand-orange" />,
-      title: "Bientôt disponible",
-      description: "Des classements pour challenger vos amis et des défis pour animer la communauté"
-    }
-  ];
-
+const LocationMap = () => {
   return (
-    <section className="py-12">
-      <h2 className="text-2xl font-bold mb-8 text-center">
-        Pourquoi choisir le Padel de Grisolles ?
-      </h2>
-      
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {features.map((feature, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-            <div className="mb-4">
-              {feature.icon}
+    <div className="py-12">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-6 text-center">Localisation du Padel de Grisolles</h2>
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl">
+            <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.7057351691537!2d1.284948275666455!3d43.820462841597454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ac03797fae2099%3A0xb0184e9f73d0075b!2sVillage%20Padel!5e0!3m2!1sfr!2sfr!4v1736013037261!5m2!1sfr!2sfr"
+                className="absolute top-0 left-0 w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localisation du Padel de Grisolles"
+              ></iframe>
             </div>
-            <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
-            <p className="text-gray-600">{feature.description}</p>
           </div>
-        ))}
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Features;
+export default LocationMap;
