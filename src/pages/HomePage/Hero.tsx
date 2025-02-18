@@ -13,8 +13,7 @@ const Hero: React.FC = () => {
                 <span className="block text-brand-orange">avec Village Padel</span>
               </h1>
               <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Village Padel a pour mission de démocratiser le padel dans les zones rurales. Nous proposons de développer les infrastructures locales en installant et exploitant gratuitement des pistes de padel. Vous avez déjà une piste installée ? Aucun problème : nous offrons une solution clé en main pour automatiser son fonctionnement et maximiser vos créneaux de réservation. Grâce à notre application intuitive, réserver et jouer au padel n’a jamais été aussi simple !
-              </p>
+                Village Padel démocratise le padel en zone rurale avec deux solutions clés : l’automatisation gratuite des pistes existantes et l’installation de nouvelles infrastructures, intégrées aux complexes sportifs comme les clubs de tennis. Grâce à notre application intuitive, réserver et jouer au padel devient simple et accessible !              </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <a
@@ -46,7 +45,7 @@ const Hero: React.FC = () => {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+          src="https://res.cloudinary.com/damfvriyn/image/upload/v1736002528/cjeyubfsyydtcdwkkxaw.jpg"
           alt="Terrain de padel"
         />
       </div>
