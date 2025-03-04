@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center space-x-2">
             <Link to="/" className="flex items-center" onClick={handleLinkClick}>
               <img 
-                src="https://raw.githubusercontent.com/Fab3146/Village-Padel-Flavien/main/Village_Padel_LOGO.png" // ✅ Vérifie l'URL
+                src="https://raw.githubusercontent.com/Fab3146/Village-Padel-Flavien/ba35cf00af8d0e1b03a91f11e3978f56aa7e02a0/-Village_Padel_LOGO_LOLA_Bon__1_sansfond.qpng.png" // ✅ Vérifie l'URL
                 alt="Village Padel Logo"
                 className="h-12 w-auto"
               />
