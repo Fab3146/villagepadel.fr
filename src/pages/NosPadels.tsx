@@ -7,7 +7,7 @@ import L from "leaflet";
 // 🏓 Icône personnalisée pour les marqueurs
 const padelIcon = new L.Icon({
   iconUrl:
-    "https://raw.githubusercontent.com/Fab3146/Village-Padel-Flavien/main/logo.png", // Remplace avec un lien valide
+    "https://res.cloudinary.com/damfvriyn/image/upload/v1741120072/-Village_Padel_LOGO_LOLA_Bon__1_sansfond.qpng_kkjnua.png", // Remplace avec un lien valide
   iconSize: [50, 50],
   iconAnchor: [25, 50],
   popupAnchor: [0, -50],
