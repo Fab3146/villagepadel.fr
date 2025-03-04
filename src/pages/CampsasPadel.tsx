@@ -49,7 +49,6 @@ const CampsasPadel = () => {
         {/* Localisation et communauté WhatsApp */}
         <div className="grid md:grid-cols-2 gap-12 mt-12">
           <LocationMap_campsas />
-          <WhatsAppCommunity_campsas />
         </div>
 
         {/* Autres sections */}
