@@ -9,6 +9,7 @@ const weatherBackgrounds = {
   stormy: "https://res.cloudinary.com/damfvriyn/image/upload/v1739014272/orage_qtxhlc.jpg",
   snowy: "https://res.cloudinary.com/damfvriyn/image/upload/v1739014272/pluie_ntsg1s.jpg", // Placeholder pour la neige
   night: "https://res.cloudinary.com/damfvriyn/image/upload/v1739014272/Nuit_yoegdh.jpg",
+  overcast : "https://res.cloudinary.com/damfvriyn/image/upload/v1741107073/pngtree-overcast-sky-and-a-striking-blue-sky-texture-image_13820125_uxluxw.png"
 };
 
 const weatherIcons = {
@@ -18,6 +19,7 @@ const weatherIcons = {
   rainy: <CloudRain className="text-blue-400 w-8 h-8" aria-label="Pluie" />,
   stormy: <Zap className="text-purple-500 w-8 h-8" aria-label="Orage" />,
   snowy: <CloudSnow className="text-blue-200 w-8 h-8" aria-label="Neige" />,
+  overcast: <CloudSnow className="text-blue-200 w-8 h-8" aria-label="Neige" />,
 };
 
 // Fonction pour déterminer la condition météo
@@ -27,7 +29,7 @@ const getWeatherCondition = (description: string) => {
   if (lowerDesc.includes("pluie")) return "rainy";
   if (lowerDesc.includes("neige")) return "snowy";
   if (lowerDesc.includes("nuageux")) return "cloudy";
-  if (lowerDesc.includes("couvert")) return "cloudy";
+  if (lowerDesc.includes("couvert")) return "overcast";
   if (lowerDesc.includes("éclaircie")) return "partly-cloudy";
   return "clear"; // Par défaut
 };
