@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, QrCode } from 'lucide-react';
 
@@ -17,38 +17,29 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const location = useLocation();
 
+  // 🔹 Scroll fluide pour les ancres (après un changement de route)
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   // 🔹 Ferme le menu mobile après un clic sur un lien
   const handleLinkClick = () => {
     setIsMenuOpen(false);
   };
 
-  // 🔹 Scroll fluide pour les liens d'ancre
-  const handleSolutionClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    if (location.pathname !== '/') {
-      window.location.href = '/#solutions';
-    } else {
-      document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' });
-    }
-    handleLinkClick(); // Ferme le menu après clic
-  };
-
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    if (location.pathname !== '/') {
-      window.location.href = '/#contact';
-    } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    }
-    handleLinkClick(); // Ferme le menu après clic
-  };
-
   const navItems = [
     { label: 'Accueil', to: '/', onClick: handleLinkClick },
-    { label: 'Notre Solution', to: '/#solutions', onClick: handleSolutionClick },
+    { label: 'Notre Solution', to: '/#solutions', onClick: handleLinkClick },
     { label: 'Tout sur le Padel', to: '/padel-info', onClick: handleLinkClick },
-    { label: 'Nos Padels', to: '/NosPadels', onClick: handleLinkClick },
-    { label: 'Contact', to: '/#contact', onClick: handleContactClick },
+    { label: 'Nos Padels', to: '/nos-padels', onClick: handleLinkClick }, // ✅ Correction ici
+    { label: 'Contact', to: '/#contact', onClick: handleLinkClick },
   ];
 
   return (
@@ -59,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center space-x-2">
             <Link to="/" className="flex items-center" onClick={handleLinkClick}>
               <img 
-                src="https://raw.githubusercontent.com/Fab3146/Village-Padel-Flavien/ba35cf00af8d0e1b03a91f11e3978f56aa7e02a0/-Village_Padel_LOGO_LOLA_Bon__1_sansfond.qpng.png"
+                src="https://raw.githubusercontent.com/Fab3146/Village-Padel-Flavien/main/Village_Padel_LOGO.png" // ✅ Vérifie l'URL
                 alt="Village Padel Logo"
                 className="h-12 w-auto"
               />
@@ -110,7 +101,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <Link
                 key={item.label}
                 to={item.to}
-                onClick={item.onClick} // 🔹 Ferme le menu après un clic
+                onClick={item.onClick}
                 className="block px-3 py-2 text-gray-700 hover:text-brand-orange transition font-bold"
               >
                 {item.label}
@@ -122,9 +113,9 @@ const Navbar: React.FC<NavbarProps> = ({
 
       {/* 🔹 QR Code Popup */}
       {showQR && (
-        <div className="absolute right-4 top-20 bg-white p-4 rounded-lg shadow-lg">
+        <div className="fixed right-4 top-20 bg-white p-4 rounded-lg shadow-lg z-50">
           <img
-            src="https://raw.githubusercontent.com/Fab3146/Village-Padel-Flavien/34fdcfcf245808e7550b09e48b6f01a664afee9e/qrcode_App_VP.png"
+            src="https://raw.githubusercontent.com/Fab3146/Village-Padel-Flavien/main/qrcode_App_VP.png"
             alt="QR Code Village Padel"
             className="w-32 h-32"
           />
