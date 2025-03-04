@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import PadelInfo from './pages/PadelInfo';
 import GrisollesPadel from './pages/GrisollesPadel';
+import CampsasPadel from "./pages/CampsasPadel";
 import NosPadels from './pages/NosPadels';  // S'assure d'importer le bon composant
 import QuoteRequest from './pages/QuoteRequest';
 import AppFeatures from "./pages/HomePage/AppFeatures";
@@ -55,6 +56,7 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/padel-info" element={<PadelInfo />} />
             <Route path="/grisolles" element={<GrisollesPadel />} />
+            <Route path="/campsas" element={<CampsasPadel />} />
             <Route path="/demande-devis" element={<QuoteRequest />} />
             <Route path="/application" element={<AppFeatures />} />
             <Route path="/cgu" element={<CGU />} />
