@@ -21,14 +21,14 @@ const CampsasImages = [
   }
 ];
 
-const GrisollesPadel = () => {
+const CampsasPadel = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Section d'entête */}
       <div className="bg-brand-blue text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-center">
-            Padel de Grisolles
+            Padel de Campsas
           </h1>
           <p className="text-xl text-center max-w-3xl mx-auto mb-8">
             Découvrez notre terrain outdoor, conçu pour offrir une expérience unique 
@@ -42,22 +42,22 @@ const GrisollesPadel = () => {
       <div className="container mx-auto px-4 py-12">
         {/* Informations et météo */}
         <div className="grid md:grid-cols-2 gap-12">
-          <CourtInfo />
-          <WeatherWidget />
+          <CourtInfo_campsas />
+          <WeatherWidget_campsas />
         </div>
 
         {/* Localisation et communauté WhatsApp */}
         <div className="grid md:grid-cols-2 gap-12 mt-12">
-          <LocationMap />
-          <WhatsAppCommunity />
+          <LocationMap_campsas />
+          <WhatsAppCommunity_campsas />
         </div>
 
         {/* Autres sections */}
-        <Features />
-        <BookingCTA />
+        <Features_campsas />
+        <BookingCTA_campsas />
       </div>
     </div>
   );
 };
 
-export default GrisollesPadel;
+export default CampsasPadel;
