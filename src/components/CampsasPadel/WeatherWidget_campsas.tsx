@@ -86,7 +86,7 @@ const WeatherWidget = () => {
       <div className="absolute inset-0 bg-black bg-opacity-30 p-6 flex flex-col justify-between">
         {/* Température actuelle */}
         <div className="text-center">
-          <h2 className="text-xl font-semibold">Météo à Grisolles</h2>
+          <h2 className="text-xl font-semibold">Météo à Campsas</h2>
           <div className="flex items-center justify-center gap-2 mt-2">
             {weatherIcon}
             <span className="text-4xl font-bold">{current.temp}°C</span>
