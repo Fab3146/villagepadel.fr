@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import PadelInfo from './pages/PadelInfo';
 import GrisollesPadel from './pages/GrisollesPadel';
+import NosPadels from './pages/NosPadels';
 import QuoteRequest from './pages/QuoteRequest';
 import AppFeatures from "./pages/HomePage/AppFeatures";
 import CGU from './pages/CGU';
@@ -58,6 +59,8 @@ const App: React.FC = () => {
             <Route path="/application" element={<AppFeatures />} />
             <Route path="/cgu" element={<CGU />} />
             <Route path="/cgv" element={<CGV />} />
+            <Route path="/NosPadels" element={<NosPadel />} />
+
           </Routes>
         </main>
 

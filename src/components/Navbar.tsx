@@ -47,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({
     { label: 'Accueil', to: '/', onClick: handleLinkClick },
     { label: 'Notre Solution', to: '/#solutions', onClick: handleSolutionClick },
     { label: 'Tout sur le Padel', to: '/padel-info', onClick: handleLinkClick },
-    { label: 'Padel de Grisolles', to: '/grisolles', onClick: handleLinkClick },
+    { label: 'Nos Padels', to: '/NosPadels', onClick: handleLinkClick },
     { label: 'Contact', to: '/#contact', onClick: handleContactClick },
   ];
 
