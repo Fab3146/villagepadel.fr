@@ -19,7 +19,7 @@ const terrains = [
   {
     id: "grisolles",
     name: "Padel de Grisolles",
-    position: [43.840785, 1.298672],
+    position: [43.821067, 1.28721988],
     address: "120 Chem. de la Belle Gabrielle, 82170 Grisolles",
     courts: 1,
     image:
@@ -29,7 +29,7 @@ const terrains = [
   {
     id: "campsas",
     name: "Padel de Campsas",
-    position: [43.883651, 1.406967],
+    position: [43.89817, 1.3185011],
     address: "28 Rue de la Mairie, 82370 Campsas",
     courts: 1,
     image:
