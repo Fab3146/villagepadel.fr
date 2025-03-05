@@ -1,10 +1,10 @@
 import React from 'react';
-import WeatherWidget from '../components/CampsasPadel/WeatherWidget_campsas';
-import CourtInfo from '../components/CampsasPadel/CourtInfo_campsas';
-import Features from '../components/CampsasPadel/Features_campsas';
-import BookingCTA from '../components/CampsasPadel/BookingCTA_campsas';
-import ImageCarousel from '../components/ImageCarousel';
-import LocationMap from '../components/GrisollesPadel/LocationMap';
+import WeatherWidget_campsas from '../components/CampsasPadel/WeatherWidget_campsas';
+import CourtInfo_campsas from '../components/CampsasPadel/CourtInfo_campsas';
+import Features_campsas from '../components/CampsasPadel/Features_campsas';
+import BookingCTA_campsas from '../components/CampsasPadel/BookingCTA_campsas';
+import ImageCarousel_campsas from '../components/ImageCarousel';
+import LocationMap_campsas from '../components/GrisollesPadel/LocationMap';
 
 const CampsasImages = [
   {
