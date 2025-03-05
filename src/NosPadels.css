@@ -130,4 +130,47 @@
       width: 67%;
     }
   }
+  /* 🌍 La carte prend tout l'écran sur mobile */
+@media (max-width: 768px) {
+  .map-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Plein écran */
+    z-index: 1;
+  }
+
+  /* 📜 Panneau coulissant pour les widgets */
+  .sidebar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh; /* On cache une partie */
+    background: white;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(50%); /* Semi-visible */
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    overflow-y: auto;
+  }
+
+  /* Bouton pour remonter les widgets */
+  .sidebar-handle {
+    width: 50px;
+    height: 5px;
+    background: gray;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Quand les widgets sont visibles */
+  .sidebar.open {
+    transform: translateY(0%);
+  }
+}
+
   
