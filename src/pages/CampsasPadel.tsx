@@ -3,7 +3,7 @@ import WeatherWidget_campsas from '../components/CampsasPadel/WeatherWidget_camp
 import CourtInfo_campsas from '../components/CampsasPadel/CourtInfo_campsas';
 import Features_campsas from '../components/CampsasPadel/Features_campsas';
 import BookingCTA_campsas from '../components/CampsasPadel/BookingCTA_campsas';
-import ImageCarousel_campsas from '../components/ImageCarousel';
+import ImageCarousel from '../components/ImageCarousel';
 import LocationMap_campsas from '../components/GrisollesPadel/LocationMap';
 
 const CampsasImages = [
