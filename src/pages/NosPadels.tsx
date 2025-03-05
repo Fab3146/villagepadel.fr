@@ -4,7 +4,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
 import { Link } from "react-router-dom";
 import L from "leaflet";
-import "./NosPadels.css"; // Assurez-vous d'importer un fichier CSS pour les styles
+import "../NosPadels.css"; // Assurez-vous d'importer un fichier CSS pour les styles
 
 // ✅ Icône personnalisée pour les marqueurs
 const padelIcon = new L.Icon({
