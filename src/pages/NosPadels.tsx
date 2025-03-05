@@ -4,6 +4,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
 import { Link } from "react-router-dom";
 import L from "leaflet";
+import "./NosPadel.css"; // Assurez-vous d'importer un fichier CSS pour les styles
 
 // ✅ Icône personnalisée pour les marqueurs
 const padelIcon = new L.Icon({
@@ -19,7 +20,7 @@ const terrains = [
   {
     id: "grisolles",
     name: "Padel de Grisolles",
-    position: [43.821067, 1.28721988],
+    position: [43.840785, 1.298672],
     address: "120 Chem. de la Belle Gabrielle, 82170 Grisolles",
     courts: 1,
     image:
@@ -29,7 +30,7 @@ const terrains = [
   {
     id: "campsas",
     name: "Padel de Campsas",
-    position: [43.89817, 1.3185011],
+    position: [43.883651, 1.406967],
     address: "28 Rue de la Mairie, 82370 Campsas",
     courts: 1,
     image:
@@ -47,37 +48,31 @@ const NosPadel = () => {
   );
 
   return (
-    <div className="flex h-screen">
+    <div className="nos-padel-container">
       {/* 📝 Panneau latéral gauche */}
-      <div className="w-1/3 bg-white p-6 overflow-y-auto shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">Rechercher un Padel</h2>
+      <div className="sidebar">
+        <h2 className="sidebar-title">Rechercher un Padel</h2>
         <input
           type="text"
           placeholder="Rechercher par nom..."
-          className="w-full p-2 mb-4 border rounded"
+          className="search-input"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <p className="text-sm text-gray-500 mb-2">
+        <p className="results-count">
           {filteredTerrains.length} terrains trouvés
         </p>
 
         {filteredTerrains.map((terrain) => (
-          <div
-            key={terrain.id}
-            className="bg-gray-100 p-4 rounded-lg shadow-md mb-4"
-          >
+          <div key={terrain.id} className="terrain-card">
             <img
               src={terrain.image}
               alt={terrain.name}
-              className="w-full h-32 object-cover rounded-md mb-2"
+              className="terrain-image"
             />
-            <h3 className="text-lg font-semibold">{terrain.name}</h3>
-            <p className="text-sm text-gray-500">{terrain.address}</p>
-            <Link
-              to={terrain.link}
-              className="mt-2 block bg-brand-orange text-white px-4 py-2 rounded-lg text-center hover:bg-brand-orange-dark transition"
-            >
+            <h3 className="terrain-name">{terrain.name}</h3>
+            <p className="terrain-address">{terrain.address}</p>
+            <Link to={terrain.link} className="view-more-button">
               Voir plus
             </Link>
           </div>
@@ -85,8 +80,8 @@ const NosPadel = () => {
       </div>
 
       {/* 🗺️ Carte interactive */}
-      <div className="w-2/3 h-full">
-        <MapContainer center={[43.85, 1.35]} zoom={10} className="h-full w-full">
+      <div className="map-container">
+        <MapContainer center={[43.85, 1.35]} zoom={10} className="map">
           {/* 🌍 Fond de carte stylisé */}
           <TileLayer
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
@@ -98,14 +93,13 @@ const NosPadel = () => {
             {terrains.map((terrain) => (
               <Marker key={terrain.id} position={terrain.position} icon={padelIcon}>
                 <Popup>
-                  <div className="text-center">
-                    <h3 className="text-lg font-bold">{terrain.name}</h3>
-                    <p className="text-sm text-gray-500">{terrain.address}</p>
-                    <p className="text-sm">Terrains disponibles : {terrain.courts}</p>
-                    <Link
-                      to={terrain.link}
-                      className="mt-2 inline-block bg-brand-orange text-white px-4 py-2 rounded-lg hover:bg-brand-orange-dark transition"
-                    >
+                  <div className="popup-content">
+                    <h3 className="popup-title">{terrain.name}</h3>
+                    <p className="popup-address">{terrain.address}</p>
+                    <p className="popup-courts">
+                      Terrains disponibles : {terrain.courts}
+                    </p>
+                    <Link to={terrain.link} className="popup-link">
                       Voir plus
                     </Link>
                   </div>
@@ -120,4 +114,3 @@ const NosPadel = () => {
 };
 
 export default NosPadel;
-
