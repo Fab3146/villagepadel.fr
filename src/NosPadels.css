@@ -173,4 +173,29 @@
   }
 }
 
+/* Assure la hauteur correcte de la carte */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* 📱 Mobile : Permet de voir la carte en premier et de scroller vers le widget */
+@media (max-width: 1024px) {
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .lg\:w-1\/3 {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+
+  .lg\:w-2\/3 {
+    width: 100%;
+    height: 60vh;
+  }
+}
+
   
