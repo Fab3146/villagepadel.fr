@@ -6,7 +6,7 @@ const Features = () => {
     {
       icon: <MapPin className="h-8 w-8 text-brand-orange" />,
       title: "Localisation parfaite",
-      description: "Situé au cœur de Grisolles, facile d'accès pour tous les 'villageois'"
+      description: "Situé au cœur de Campsas, facile d'accès pour tous les 'villageois'"
     },
     {
       icon: <Users className="h-8 w-8 text-brand-orange" />,

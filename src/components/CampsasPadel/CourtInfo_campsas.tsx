@@ -22,7 +22,7 @@ const CourtInfo = () => {
           <div>
             <h3 className="font-bold mb-1">Durée des créneaux</h3>
             <p className="text-gray-600">
-              Réservez facilement pour une durée standard de 1h30
+              Réservez facilement pour une durée standard de 1h30. 
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@ const CourtInfo = () => {
           <div>
             <h3 className="font-bold mb-1">Location de matériel</h3>
             <p className="text-gray-600">
-              4 raquettes et balles disponibles sur place via l'application
+              Les clès, les raquettes et les balles sont à récupérer au Restaurant bar Tabac de la place de Campsas (à200m du Padel)
             </p>
           </div>
         </div>
@@ -42,8 +42,7 @@ const CourtInfo = () => {
           <div>
             <h3 className="font-bold mb-1">Tarifs</h3>
             <ul className="text-gray-600 list-disc list-inside">
-              <li>Offre d'ouverture : 20€ pour 1h30</li>
-              <li>Tarif normal : 32€ pour 1h30</li>
+              <li>Tarif : 24€ pour 1h30</li>
             </ul>
           </div>
         </div>
