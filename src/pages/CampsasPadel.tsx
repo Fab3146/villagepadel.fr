@@ -12,11 +12,11 @@ const CampsasImages = [
     alt: "Terrain de padel campsas"
   },
   {
-    url: "https://res.cloudinary.com/damfvriyn/image/upload/v1736010636/IMG_2477_lmkxty_4eb23e.jpg",
+    url: "https://res.cloudinary.com/damfvriyn/image/upload/v1741196599/480505487_985367373694261_8641342512726171271_n_fe8f8n.jpg",
     alt: "Installation padel"
   },
   {
-    url: "https://res.cloudinary.com/damfvriyn/image/upload/v1736011104/cjeyubfsyydtcdwkkxaw_c04b07.jpg",
+    url: "https://res.cloudinary.com/damfvriyn/image/upload/v1736011104/cjeyubfsyydtcdwkkxaw_c04b07.jpghttps://res.cloudinary.com/damfvriyn/image/upload/v1741196415/480328728_985367503694248_4817792986897410785_n_z6g1oy.jpg",
     alt: "Vue du terrain"
   }
 ];
