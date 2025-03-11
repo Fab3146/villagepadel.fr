@@ -7,6 +7,7 @@ import GrisollesPadel from './pages/GrisollesPadel';
 import CampsasPadel from "./pages/CampsasPadel";
 import NosPadels from './pages/NosPadels';  // S'assure d'importer le bon composant
 import QuoteRequest from './pages/QuoteRequest';
+import ReservationConfirmation from './pages/ReservationConfirmation'
 import AppFeatures from "./pages/HomePage/AppFeatures";
 import CGU from './pages/CGU';
 import CGV from './pages/CGV';
@@ -62,6 +63,7 @@ const App: React.FC = () => {
             <Route path="/cgu" element={<CGU />} />
             <Route path="/cgv" element={<CGV />} />
             <Route path="/nos-padels" element={<NosPadels />} />
+            <Route path="/Confirmation_Reservation" element={<ReservationConfirmation />} />
 
           </Routes>
         </main>
