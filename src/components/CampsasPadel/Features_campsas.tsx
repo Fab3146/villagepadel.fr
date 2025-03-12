@@ -28,7 +28,7 @@ const Features = () => {
   return (
     <section className="py-12">
       <h2 className="text-2xl font-bold mb-8 text-center">
-        Pourquoi choisir le Padel de Grisolles ?
+        Pourquoi choisir le Padel de Campsas ?
       </h2>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
