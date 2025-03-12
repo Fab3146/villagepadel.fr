@@ -63,7 +63,7 @@ const App: React.FC = () => {
             <Route path="/cgu" element={<CGU />} />
             <Route path="/cgv" element={<CGV />} />
             <Route path="/nos-padels" element={<NosPadels />} />
-            <Route path="/Confirmation_Reservation" element={<ReservationConfirmation />} />
+            <Route path="/ConfirmationReservation" element={<ReservationConfirmation />} />
 
           </Routes>
         </main>
