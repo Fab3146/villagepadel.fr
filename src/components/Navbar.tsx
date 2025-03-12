@@ -115,7 +115,7 @@ const Navbar: React.FC<NavbarProps> = ({
       {showQR && (
         <div className="fixed right-4 top-20 bg-white p-4 rounded-lg shadow-lg z-50">
           <img
-            src="https://raw.githubusercontent.com/Fab3146/Village-Padel-Flavien/main/qrcode_App_VP.png"
+            src="https://res.cloudinary.com/damfvriyn/image/upload/v1741717893/Image1_ftaggw.png"
             alt="QR Code Village Padel"
             className="w-32 h-32"
           />
